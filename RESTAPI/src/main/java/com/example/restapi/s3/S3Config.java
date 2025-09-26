@@ -24,7 +24,7 @@ public class S3Config {
     @Bean
     public S3Presigner s3Presigner() {
         return S3Presigner.builder()
-                .region(Region.of(awsRegion)) //änderung von "eu-central-1" auf awsRegion
+                .region(Region.of(awsRegion))
                 .build();
     }
 }

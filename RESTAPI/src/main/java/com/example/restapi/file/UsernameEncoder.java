@@ -13,7 +13,7 @@ import java.util.Base64;
 @Component
 public class UsernameEncoder {
 
-    // HMAC-SHA256 Schlüssel aus application.properties
+
     private final String hmacKey;
 
     private final UserMappingRepository userMappingRepository;

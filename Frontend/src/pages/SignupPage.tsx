@@ -34,16 +34,18 @@ export default function SignupPage() {
   }
 
   return (
-    <form onSubmit={onSubmit} style={{ maxWidth: 360, display: 'grid', gap: 8 }}>
-      <h2>Signup</h2>
-      <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-      <input placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-      <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-      <input placeholder="Confirm Password" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
-      <button type="submit">Create Account</button>
-      {message && <div style={{ color: 'green' }}>{message}</div>}
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-    </form>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '70vh' }}>
+      <form onSubmit={onSubmit} style={{ maxWidth: 360, width: '100%', display: 'grid', gap: 8 }}>
+        <h2 style={{ textAlign: 'center' }}>Signup</h2>
+        <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+        <input placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
+        <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+        <input placeholder="Confirm Password" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
+        <button type="submit">Create Account</button>
+        {message && <div style={{ color: 'green' }}>{message}</div>}
+        {error && <div style={{ color: 'red' }}>{error}</div>}
+      </form>
+    </div>
   )
 }
 

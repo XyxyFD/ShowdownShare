@@ -74,6 +74,10 @@ export default function UnseenDownloadPage() {
           {loading ? 'Preparing...' : 'Download unseen.zip'}
         </button>
         <small className="text-muted">Downloads all files you have not yet downloaded as a ZIP.</small>
+          {/* Disclaimer section */}
+          <div style={{ marginTop: '2em', padding: '1em', background: '#fffbe6', border: '1px solid #ffe58f', borderRadius: '6px' }}>
+            <strong>Disclaimer:</strong> Sometimes, not all files are downloaded at once. Please check the unseen counter above. If it is more than 0, there are still files you can download.
+          </div>
       </div>
     </div>
   )

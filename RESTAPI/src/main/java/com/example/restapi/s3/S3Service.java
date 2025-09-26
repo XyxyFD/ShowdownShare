@@ -48,22 +48,7 @@ public class S3Service {
         PresignedGetObjectRequest presigned = presigner.presignGetObject(presignRequest);
         return presigned.url().toString();
     }
-    public byte[] downloadObject(String bucketName, String key){
-        GetObjectRequest getObjectRequest = GetObjectRequest.builder()
-                .bucket(bucketName)
-                .key(key)
-                .build();
-        ResponseInputStream<GetObjectResponse> res = s3Client.getObject((getObjectRequest));
 
-        try {
-            return res.readAllBytes();
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-
-    }
     public ResponseInputStream<GetObjectResponse> downloadObjectAsStream(String bucketName, String key) {
         GetObjectRequest req = GetObjectRequest.builder()
                 .bucket(bucketName).key(key).build();

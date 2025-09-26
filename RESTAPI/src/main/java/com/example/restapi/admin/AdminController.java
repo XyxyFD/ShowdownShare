@@ -17,7 +17,6 @@ import java.util.List;
 @RequestMapping("/admin")
 @PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
-    private final FileService fileService;
 
     private final UserRepository userRepository;
 
@@ -25,13 +24,12 @@ public class AdminController {
 
 
 
-    public AdminController(FileService fileService, UserRepository userRepository, AdminService adminService) {
-        this.fileService = fileService;
+    public AdminController(UserRepository userRepository, AdminService adminService) {
         this.userRepository = userRepository;
         this.adminService = adminService;
     }
 
-    // GET /admin/files?status=PENDING&page=0&size=25&sort=uploadDate,desc
+
     @GetMapping("/files")
     public ResponseEntity<List<FileMetaDto>> listFilesForAdmin(
             @RequestParam(required = false) FileStatus status){
@@ -45,7 +43,7 @@ public class AdminController {
 
 
 
-    // POST /admin/files/{id}/approve
+
     @PostMapping("/files/{id}/approve")
     public ResponseEntity<Void> approve(
             @RequestParam String status,

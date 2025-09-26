@@ -13,13 +13,13 @@ public class AuditLog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Wer hat es getan
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false,
             foreignKey = @ForeignKey(name = "fk_audit_user"))
     private User user;
 
-    // Auf welche Datei bezogen
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "file_id", nullable = true,
             foreignKey = @ForeignKey(name = "fk_audit_file"))
@@ -61,18 +61,12 @@ public class AuditLog {
         return this;
     }
 
-    public ActionType getAction() {
-        return action;
-    }
 
     public AuditLog setAction(ActionType action) {
         this.action = action;
         return this;
     }
 
-    public OffsetDateTime getTimestamp() {
-        return timestamp;
-    }
 
     public AuditLog setTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;

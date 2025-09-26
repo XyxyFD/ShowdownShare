@@ -10,14 +10,6 @@ import java.util.List;
 public interface AuditRepository extends JpaRepository<AuditLog, Long> {
 
 
-    @Query("""
-           select distinct a.file
-           from AuditLog a
-           where a.user = :user
-             and a.action = com.example.restapi.audit.ActionType.DOWNLOAD
-           order by a.timestamp desc
-           """)
-    List<FileMeta> findDownloadedFilesByUser(User user);
 
     @Query("""
     select f

@@ -45,13 +45,15 @@ export default function LoginPage() {
   }
 
   return (
-    <form onSubmit={onSubmit} style={{ maxWidth: 360, display: 'grid', gap: 8 }}>
-      <h2>Login</h2>
-      <input placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-      <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button type="submit">Login</button>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-    </form>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '70vh' }}>
+      <form onSubmit={onSubmit} style={{ maxWidth: 360, width: '100%', display: 'grid', gap: 8 }}>
+        <h2 style={{ textAlign: 'center' }}>Login</h2>
+        <input placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
+        <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+        <button type="submit">Login</button>
+        {error && <div style={{ color: 'red' }}>{error}</div>}
+      </form>
+    </div>
   )
 }
 
