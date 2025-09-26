@@ -40,6 +40,7 @@ function HomePage() {
         </ol>
         <p className="text-muted mt-3" style={{fontSize:15}}>
           For more information, see the <Link to="/about">About page</Link>.
+          If you have any questions or problems, feel free to write an email to showdownshare.service@gmail.com
         </p>
       </div>
     </div>
