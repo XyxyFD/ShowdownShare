@@ -1,0 +1,22 @@
+npm run dev
+localhost:5173
+
+
+
+
+- Design
+
+- Encryption: Feld sollte leer sein und nicht standardmäßig der angemeldete Username sein
+
+- Adminpage hat error, wenn ich sie reloade
+
+
+unwichtiger:
+
+wenn seite nicht richtig funktioniert (403) und ich auf zurück klicke kommt immer noch die Login page.
+Wenn ich den Server neu starte (am nächsten Tag), dann bin ich noch kurz eingeloggt und es dauert bisschen,
+bis ich auf die login page komme
+
+
+Adminbereich
+SecurityConfiguration: Stelle sicher, dass /admin/** serverseitig geschützt ist (hasRole('ADMIN')).

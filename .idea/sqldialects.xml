@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/RESTAPI/src/main/resources/db/migration/V1__CreateTables.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/RESTAPI/src/main/resources/db/migration/V2__Create_file_meta_table.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/RESTAPI/src/main/resources/db/migration/V3__Verificationcode_drop_not_null.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/RESTAPI/src/main/resources/db/migration/V4__Drop_constraint_chk_audit_action.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/RESTAPI/src/main/resources/db/migration/V5__drop_constraint_for_delete_files.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/RESTAPI/src/main/resources/db/migration/V6__drop_hand_histories_table.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/RESTAPI/src/main/resources/db/migration/V7__username_mapping.sql" dialect="GenericSQL" />
+  </component>
+</project>
